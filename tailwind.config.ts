@@ -8,9 +8,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        kanit: ["Kanit", "sans-serif"],
+      },
+      fontSize: {
+        base: "62.5%", // Root font-size (10px equivalent)
       },
     },
   },
