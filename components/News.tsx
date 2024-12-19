@@ -6,7 +6,7 @@ import Header from "./Header";
 
 const News = () => {
   return (
-    <div className="text-2xl text-white w-full h-full flex flex-col justify-between gap-8">
+    <div className="text-[2rem ] text-white w-full h-full flex flex-col justify-between gap-8">
       <Header />
       <div className="flex gap-8 h-[calc(100%-16rem)] px-[2rem]">
         <div className="w-72 h-full flex flex-col gap-8">
