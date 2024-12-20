@@ -11,9 +11,7 @@ export default {
       fontFamily: {
         kanit: ["Kanit", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
-      },
-      fontSize: {
-        base: "62.5%", // Root font-size (10px equivalent)
+        comfortaa: ["Comfortaa", "sans-serif"],
       },
     },
   },
