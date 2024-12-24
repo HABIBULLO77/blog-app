@@ -90,10 +90,86 @@ const News = () => {
           </nav>
         </div>
         <div className=" w-[clamp(30rem,43cqi,40%)] h-full rounded-2xl">
-          <div className="w-full h-[calc(50%-2rem)] bg-[#111214] rounded-2xl mb-8">
-            Headlines
+          <div className="w-full h-[calc(50%-2rem)] bg-[#111214] rounded-2xl mb-8 relative">
+            <img
+              src="/images/tech.jpg"
+              alt="Headline Image"
+              className="w-full h-full object-cover rounded-[1rem] opacity-40"
+            />
+            <h2 className="w-full absolute bottom-0 left-0 p-[1rem] pr-[4rem] pb-[1rem] pl-[1rem] font-bebas text-[clamp(1.5rem,1.8cqi,3rem)] tracking-[0.1rem] text-white bg-[rgba(0,0,0,0.7)] rounded-b-[1rem]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+              doloremque sapiente.
+              <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+            </h2>
           </div>
-          <div className="w-full h-1/2 bg-[#111214] rounded-2xl">News Grid</div>
+          <div className="w-full h-1/2 bg-[#111214] rounded-2xl grid grid-cols-3 grid-rows-2 gap-4  p-[1.2rem] justify-center items-center">
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/tech.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/sports.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/science.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/world.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/health.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+            <div className="w-full h-full min-h-60 rounded-2xl relative">
+              <img
+                src="/images/nation.jpg"
+                alt="News Image"
+                className="w-full h-full block object-cover rounded-[1rem] opacity-50"
+              />
+              <h3 className="absolute bottom-0 left-0 py-4 px-12 text-[1.6rem] font-bebas font-light leading-[1.4rem] bg-[rgba(0,0,0,0.7)] w-full rounded-b-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h3>
+            </div>
+          </div>
         </div>
         <div className="w-[clamp(20rem,27cqi,28%)] h-full bg-[#111214] rounded-2xl">
           My Blogs
