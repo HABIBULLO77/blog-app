@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Weather from "./Weather";
 import Calender from "./Calender";
 import Footer from "./Footer";
 import Header from "./Header";
+import axios from "axios";
 
 const News = () => {
+  const [headline, setHeadline] = useState(null);
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      const url =
+        "https://gnews.io/api/v4/top-headlines?category=general&lang=en&apikey=f442841eede52ce6d845dff8a172b3ba";
+      const response = await axios.get(url);
+      const fetchedNews = response.data.articles;
+      setHeadline(fetchedNews[0]);
+    };
+  }, []);
   return (
     <div className="text-[2rem ] text-white w-full h-full flex flex-col justify-between gap-8">
       <Header />
@@ -92,8 +105,8 @@ const News = () => {
         <div className=" w-[clamp(30rem,43cqi,40%)] h-full rounded-2xl">
           <div className="w-full h-[calc(50%-2rem)] bg-[#111214] rounded-2xl mb-8 relative">
             <img
-              src="/images/tech.jpg"
-              alt="Headline Image"
+              src={headline.image}
+              alt={headline.title}
               className="w-full h-full object-cover rounded-[1rem] opacity-40"
             />
             <h2 className="w-full absolute bottom-0 left-0 p-[1rem] pr-[4rem] pb-[1rem] pl-[1rem] font-bebas text-[clamp(1.5rem,1.8cqi,3rem)] tracking-[0.1rem] text-white bg-[rgba(0,0,0,0.7)] rounded-b-[1rem]">
