@@ -6,7 +6,7 @@ import Header from "./Header";
 import axios from "axios";
 
 const News = () => {
-  const [headline, setHeadline] = useState(null);
+  const [headline, setHeadline] = useState<Headline | null>(null);
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const News = () => {
     };
     fetchNews();
   }, []);
-  console.log("headline", headline);
+  console.log("headline", headline?.title);
   return (
     <div className="text-[2rem ] text-white w-full h-full flex flex-col justify-between gap-8">
       <Header />
@@ -109,13 +109,19 @@ const News = () => {
         <div className=" w-[clamp(30rem,43cqi,40%)] h-full rounded-2xl">
           <div className="w-full h-[calc(50%-2rem)] bg-[#111214] rounded-2xl mb-8 relative">
             <img
-              //src={headline.image}
-              //alt={headline.title}
+              src={headline?.image}
+              alt={headline?.title}
               className="w-full h-full object-cover rounded-[1rem] opacity-40"
             />
-            <h2 className="w-full absolute bottom-0 left-0 p-[1rem] pr-[4rem] pb-[1rem] pl-[1rem] font-bebas text-[clamp(1.5rem,1.8cqi,3rem)] tracking-[0.1rem] text-white bg-[rgba(0,0,0,0.7)] rounded-b-[1rem]">
-              <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
-            </h2>
+            {headline && headline.title ? (
+              <h2 className="w-full absolute bottom-0 left-0 p-[1rem] pr-[4rem] pb-[1rem] pl-[1rem] font-bebas text-[clamp(1.5rem,1.8cqi,3rem)] tracking-[0.1rem] text-white bg-[rgba(0,0,0,0.7)] rounded-b-[1rem]">
+                {headline.title}
+
+                <i className="fa-regular fa-bookmark absolute bottom-4 right-4 cursor-pointer"></i>
+              </h2>
+            ) : (
+              <p>Loading headline...</p>
+            )}
           </div>
           <div className="w-full h-1/2 bg-[#111214] rounded-2xl grid grid-cols-3 grid-rows-2 gap-4  p-[1.2rem] justify-center items-center">
             <div className="w-full h-full min-h-60 rounded-2xl relative">
